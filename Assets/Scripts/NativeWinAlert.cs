@@ -26,6 +26,6 @@ public static class NativeWinAlert
         {
             MessageBox(GetWindowHandle(), text, caption, (uint)(0x00000000L | 0x00000010L));
         }
-        catch (Exception ex) { }
+        catch (Exception ex) { throw ex; }
     }
 }
