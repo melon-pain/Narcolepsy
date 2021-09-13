@@ -65,5 +65,6 @@ public class CharacterMovement : MonoBehaviour
         }
 
         velocity.y += gravity.y * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 }
