@@ -4,26 +4,24 @@ using UnityEngine;
 
 public class CharacterInteraction : MonoBehaviour
 {
-    RaycastHit[] hits;
+    [SerializeField] private GameObject interactText;
+    private RaycastHit[] hits;
 
     private void Update()
     {
-        if (Input.GetButtonDown("Interact"))
+        hits = Physics.SphereCastAll(this.transform.position + Vector3.up, 1.0f, Vector3.forward, 1.0f);
+        foreach (RaycastHit hit in hits)
         {
-            hits = Physics.SphereCastAll(this.transform.position + Vector3.up, 1.0f, Vector3.forward, 1.0f);
-            foreach (RaycastHit hit in hits)
+            interactText.SetActive(false);
+            if (hit.collider.tag == "Interactable")
             {
-                if(hit.collider.tag == "Interactable")
+                interactText.SetActive(true);
+                if (Input.GetButtonDown("Interact"))
                 {
                     hit.collider.GetComponent<Interactable>().OnInteract.Invoke();
-                    break;
                 }
+                break;
             }
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(this.transform.position + Vector3.up, 1.0f);
     }
 }
