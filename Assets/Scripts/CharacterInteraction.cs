@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CharacterInteraction : MonoBehaviour
 {
@@ -21,12 +22,13 @@ public class CharacterInteraction : MonoBehaviour
             interactText.SetActive(false);
             if (hit.collider.tag == "Interactable")
             {
+                interactText.GetComponent<TMP_Text>().text = "[F] " + hit.collider.GetComponent<Interactable>().interactionText;
                 interactText.SetActive(true);
                 if (Input.GetButtonDown("Interact"))
                 {
                     hit.collider.GetComponent<Interactable>().OnInteract.Invoke();
                 }
-                break;
+                return;
             }
         }
     }
