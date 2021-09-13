@@ -289,7 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063dc3f833f063043bf89c9cd751e07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: {fileID: 0}
+  animator: {fileID: 5976171587156707914}
+  interactText: {fileID: 8190023620950622650}
 --- !u!81 &8095919877227674603
 AudioListener:
   m_ObjectHideFlags: 0
