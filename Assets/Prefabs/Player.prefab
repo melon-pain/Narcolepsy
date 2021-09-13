@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 253668107569248222}
   - component: {fileID: 253668107569248221}
   - component: {fileID: 253668107569248193}
+  - component: {fileID: 8095919877227674603}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -258,7 +259,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.1
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
@@ -288,7 +289,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063dc3f833f063043bf89c9cd751e07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: {fileID: 0}
+  animator: {fileID: 5976171587156707914}
+  interactText: {fileID: 8190023620950622650}
+--- !u!81 &8095919877227674603
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100105489255991946}
+  m_Enabled: 1
 --- !u!1 &1229558063115124790
 GameObject:
   m_ObjectHideFlags: 0
