@@ -1527,6 +1527,7 @@ GameObject:
   - component: {fileID: 5196991066788028957}
   - component: {fileID: 8430324569431448849}
   - component: {fileID: 5196991066788028954}
+  - component: {fileID: 8481487654955818320}
   m_Layer: 0
   m_Name: Lego Scatter
   m_TagString: Interactable
@@ -1575,21 +1576,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57bbd4e39fa44f4295e6c13277d9f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionText: Pick Up Lego Bricks
   OnInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5196991066788028956}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &8430324569431448849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,6 +1607,30 @@ MonoBehaviour:
           m_StringArgument: Hurt
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8481487654955818320}
+        m_TargetAssemblyTypeName: Deactivate, Assembly-CSharp
+        m_MethodName: DeactivateAfterTimer
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &5196991066788028954
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1630,3 +1644,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8481487654955818320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196991066788028956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b32a5a780c4f848ace99152c97ab9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
