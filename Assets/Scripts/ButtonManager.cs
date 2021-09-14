@@ -9,7 +9,7 @@ public class ButtonManager : MonoBehaviour
 
     public void onStart()
     {
-        SceneManager.LoadScene("ShadScene");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void MainMenu()

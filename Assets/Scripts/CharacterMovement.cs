@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
 public class CharacterMovement : MonoBehaviour
 {
     [Header("Movement")]
@@ -69,5 +68,25 @@ public class CharacterMovement : MonoBehaviour
 
         velocity.y += gravity.y * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void CursorVisible()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void ResetPosition()
+    {
+        Destroy(controller);
+        StartCoroutine(A());
+        CursorVisible();
+    }
+
+    private IEnumerator A()
+    {
+        yield return null;
+        this.transform.localPosition = Vector3.down * 0.4f;
+        this.transform.localEulerAngles = Vector3.up * 90.0f;
     }
 }
