@@ -41,6 +41,9 @@ public class CharacterMovement : MonoBehaviour
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Running"))
             return;
 
+        if (!controller)
+            return;
+
         bool isGrounded = controller.isGrounded;
 
         if (isGrounded && velocity.y < 0.0f)
