@@ -18,6 +18,7 @@ public class Narcolepsy : MonoBehaviour
         if (seconds <= 60)
         {
             vignette.intensity.value = 1.0f - (seconds / 60.0f);
+            Debug.Log(vignette.intensity.value);
         }
     }
 }
