@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Lamp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Fix()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.gameObject.GetComponent<Animator>().SetTrigger("Fix");
+        this.gameObject.tag = "Untagged";
+        this.gameObject.GetComponent<Lamp>().enabled = false;
     }
 }
