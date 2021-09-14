@@ -8,7 +8,7 @@ public class DestroyGame : MonoBehaviour
     [SerializeField] private PostProcessVolume volume;
     private Error error;
 
-    public void OnTriggerEnter()
+    public void StartDestroy()
     {
         volume.profile.TryGetSettings<Error>(out error);
         StartCoroutine(Destroy());
