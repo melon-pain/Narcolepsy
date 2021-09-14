@@ -8,7 +8,7 @@ public class Narcolepsy : MonoBehaviour
     [SerializeField] private PostProcessVolume volume;
     private Vignette vignette;
 
-    private void Start()
+    private void Awake()
     {
         volume.profile.TryGetSettings<Vignette>(out vignette);
     }
